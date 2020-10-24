@@ -1,14 +1,24 @@
 import firebase from 'firebase';
 
+const {
+    REACT_APP_FIREBASE_API_KEY,
+    REACT_APP_FIREBASE_AUTH_DOMAIN,
+    REACT_APP_FIREBASE_DATABASE_URL,
+    REACT_APP_FIREBASE_PROJECT_ID,
+    REACT_APP_FIREBASE_STORAGE_BUCKET,
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    REACT_APP_FIREBASE_APP_ID,
+
+} = process.env;
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBy1RCjFn11E9sT07H3OQbNQ-Uq_uT0UDo",
-    authDomain: "idobatakaigi-with-ham-8fd72.firebaseapp.com",
-    databaseURL: "https://idobatakaigi-with-ham-8fd72.firebaseio.com",
-    projectId: "idobatakaigi-with-ham-8fd72",
-    storageBucket: "idobatakaigi-with-ham-8fd72.appspot.com",
-    messagingSenderId: "433923151564",
-    appId: "1:433923151564:web:cd5bb1adbfbff113201469"
+    apiKey: REACT_APP_FIREBASE_API_KEY,
+    authDomain: REACT_APP_FIREBASE_AUTH_DOMAIN,
+    databaseURL: REACT_APP_FIREBASE_DATABASE_URL,
+    projectId: REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: REACT_APP_FIREBASE_APP_ID,
   };
 
 firebase.initializeApp(firebaseConfig);
